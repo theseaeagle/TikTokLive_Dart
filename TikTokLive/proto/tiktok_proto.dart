@@ -1050,4 +1050,1847 @@ class UserEcommerceEntranceShowcaseEntranceInfo extends BetterProtoMessage {
 class UserFansClub extends BetterProtoMessage {
   UserFansClubFansClubData data = 1;
 }
-//SEGMENT 13
+//SEGMENT 13 ------------------------------------ START FROM 1
+import 'package:betterproto/betterproto.dart';
+
+// UserFansClubFansClubData message
+@dataclass
+class UserFansClubFansClubData extends Message {
+  @Field(1)
+  String clubName;
+
+  @Field(2)
+  int level;
+
+  @Field(3)
+  UserFansClubFansClubDataUserFansClubStatus userFansClubStatus;
+
+  @Field(5)
+  List<int> availableGiftIdsList;
+
+  @Field(6)
+  int anchorId;
+}
+
+enum UserFansClubFansClubDataUserFansClubStatus {
+  // Define enum values here
+}
+
+// UserFansClubInfo message
+@dataclass
+class UserFansClubInfo extends Message {
+  @Field(1)
+  bool isSleeping;
+
+  @Field(2)
+  int fansLevel;
+
+  @Field(3)
+  int fansScore;
+
+  @Field(4)
+  Image badge;
+
+  @Field(5)
+  int fansCount;
+}
+
+// UserFollowInfo message
+@dataclass
+class UserFollowInfo extends Message {
+  @Field(1)
+  int followingCount;
+
+  @Field(2)
+  int followerCount;
+
+  @Field(3)
+  int followStatus;
+
+  @Field(4)
+  int pushStatus;
+}
+
+// UserOwnRoom message
+@dataclass
+class UserOwnRoom extends Message {
+  @Field(1)
+  List<int> roomIdsList;
+
+  @Field(2)
+  List<String> roomIdsStrList;
+}
+
+// UserPayGrade message
+@dataclass
+class UserPayGrade extends Message {
+  @Field(2)
+  Image diamondIcon;
+
+  @Field(3)
+  String name;
+
+  @Field(4)
+  Image icon;
+
+  @Field(5)
+  String nextName;
+
+  @Field(6)
+  int level;
+
+  @Field(7)
+  Image nextIcon;
+
+  @Field(13)
+  String gradeDescribe;
+
+  @Field(14)
+  List<UserPayGradeGradeIcon> gradeIconList;
+
+  @Field(15)
+  int screenChatType;
+
+  @Field(16)
+  Image imIcon;
+
+  @Field(17)
+  Image imIconWithLevel;
+
+  @Field(18)
+  Image liveIcon;
+
+  @Field(19)
+  Image newImIconWithLevel;
+
+  @Field(20)
+  Image newLiveIcon;
+
+  @Field(21)
+  int upgradeNeedConsume;
+
+  @Field(22)
+  String nextPrivileges;
+
+  @Field(23)
+  Image background;
+
+  @Field(24)
+  Image backgroundBack;
+
+  @Field(25)
+  int score;
+
+  @Field(1001)
+  String gradeBanner;
+}
+
+// UserPayGradeGradeIcon message
+@dataclass
+class UserPayGradeGradeIcon extends Message {
+  // Define fields for UserPayGradeGradeIcon message if needed
+}
+
+// Image message
+@dataclass
+class Image extends Message {
+  // Define fields for Image message if needed
+}
+// SEGMENT 13 - 2
+// Continuing from the previous conversion
+
+// UserPayGrade message continued
+@dataclass
+class UserPayGrade extends Message {
+  @Field(24)
+  Image backgroundBack;
+
+  @Field(25)
+  int score;
+
+  @Field(1001)
+  String gradeBanner;
+
+  @Field(1002)
+  Image profileDialogBg;
+
+  @Field(1003)
+  Image profileDialogBgBack;
+}
+
+// UserPayGradeGradeIcon message
+@dataclass
+class UserPayGradeGradeIcon extends Message {
+  @Field(1)
+  Image icon;
+
+  @Field(2)
+  int iconDiamond;
+
+  @Field(3)
+  int level;
+
+  @Field(4)
+  String levelStr;
+}
+
+// UserSubscribeBadge message
+@dataclass
+class UserSubscribeBadge extends Message {
+  @Field(3)
+  Image originImg;
+
+  @Field(4)
+  Image previewImg;
+}
+
+// UserSubscribeInfo message
+@dataclass
+class UserSubscribeInfo extends Message {
+  @Field(1)
+  bool qualification;
+
+  @Field(2)
+  bool isSubscribe;
+
+  @Field(3)
+  UserSubscribeBadge badge;
+
+  @Field(4)
+  bool enableSubscription;
+
+  @Field(5)
+  int subscriberCount;
+
+  @Field(6)
+  bool isInGracePeriod;
+
+  @Field(7)
+  bool isSubscribedToAnchor;
+
+  @Field(9)
+  bool userGiftSubAuth;
+
+  @Field(10)
+  bool anchorGiftSubAuth;
+}
+
+// UserUserAttr message
+@dataclass
+class UserUserAttr extends Message {
+  @Field(1)
+  bool isMuted;
+
+  @Field(2)
+  bool isAdmin;
+
+  @Field(3)
+  bool isSuperAdmin;
+
+  @Field(4)
+  int muteDuration;
+}
+
+// UserUserStats message
+@dataclass
+class UserUserStats extends Message {
+  @Field(1)
+  int id;
+
+  @Field(2)
+  String idStr;
+
+  @Field(3)
+  int followingCount;
+
+  @Field(4)
+  int followerCount;
+
+  @Field(5)
+  int recordCount;
+
+  @Field(6)
+  int totalDuration;
+
+  @Field(7)
+  int dailyFanTicketCount;
+
+  @Field(8)
+  int dailyIncome;
+
+  @Field(9)
+  int itemCount;
+
+  @Field(10)
+  int favoriteItemCount;
+
+  @Field(12)
+  int diamondConsumedCount;
+
+  @Field(13)
+  int tuwenItemCount;
+}
+
+// Emote message
+@dataclass
+class Emote extends Message {
+  // Define fields for Emote message if needed
+}
+//SEGMENT 13-3
+// Continuing from the previous conversion
+
+// Emote message
+@dataclass
+class Emote extends Message {
+  @Field(1)
+  String emoteId;
+
+  @Field(2)
+  Image image;
+
+  @Field(3)
+  AuditStatus auditStatus;
+
+  @Field(4)
+  String uuid;
+
+  @Field(5)
+  EmoteType emoteType;
+
+  @Field(6)
+  ContentSource contentSource;
+
+  @Field(7)
+  EmotePrivateType emotePrivateType;
+}
+
+// AuditStatus enum
+enum AuditStatus {
+  // Define enum values here
+}
+
+// EmoteType enum
+enum EmoteType {
+  // Define enum values here
+}
+
+// ContentSource enum
+enum ContentSource {
+  // Define enum values here
+}
+
+// EmotePrivateType enum
+enum EmotePrivateType {
+  // Define enum values here
+}
+
+// PunishEventInfo message
+@dataclass
+class PunishEventInfo extends Message {
+  @Field(1)
+  String punishType;
+
+  @Field(2)
+  String punishReason;
+
+  @Field(3)
+  String punishId;
+
+  @Field(4)
+  int violationUid;
+
+  @Field(5)
+  int punishTypeId;
+
+  @Field(6)
+  int duration;
+}
+
+// MsgFilter message
+@dataclass
+class MsgFilter extends Message {
+  @Field(1)
+  bool isGifter;
+
+  @Field(2)
+  bool isSubscribedToAnchor;
+}
+
+// UserIdentity message
+@dataclass
+class UserIdentity extends Message {
+  @Field(1)
+  bool isGiftGiverOfAnchor;
+
+  @Field(2)
+  bool isSubscriberOfAnchor;
+
+  @Field(3)
+  bool isMutualFollowingWithAnchor;
+
+  @Field(4)
+  bool isFollowerOfAnchor;
+
+  @Field(5)
+  bool isModeratorOfAnchor;
+
+  @Field(6)
+  bool isAnchor;
+}
+
+// Goal message
+@dataclass
+class Goal extends Message {
+  @Field(1)
+  int id;
+
+  @Field(5)
+  String description;
+
+  @Field(6)
+  int auditStatus;
+
+  @Field(8)
+  int startTime;
+
+  @Field(9)
+  int expireTime;
+
+  @Field(10)
+  int realFinishTime;
+
+  @Field(11)
+  List<GoalGoalContributor> contributorsList;
+
+  @Field(12)
+  int contributorsLength;
+
+  @Field(13)
+  String idStr;
+
+  @Field(14)
+  String auditDescription;
+
+  @Field(15)
+  GoalGoalStats stats;
+}
+
+// GoalGoalContributor message
+@dataclass
+class GoalGoalContributor extends Message {
+  // Define fields for GoalGoalContributor message if needed
+}
+
+// GoalGoalStats message
+@dataclass
+class GoalGoalStats extends Message {
+  @Field(1)
+  int totalCoins;
+
+  @Field(2)
+  int totalContributor;
+}
+//SEGMENT 13-4
+// Continuing from the previous conversion
+
+// GoalGoalStats message
+@dataclass
+class GoalGoalStats extends Message {
+  @Field(1)
+  int totalCoins;
+
+  @Field(2)
+  int totalContributor;
+}
+
+// GoalGoalContributor message
+@dataclass
+class GoalGoalContributor extends Message {
+  @Field(1)
+  int userId;
+
+  @Field(2)
+  Image avatar;
+
+  @Field(3)
+  String displayId;
+
+  @Field(4)
+  int score;
+
+  @Field(5)
+  String userIdStr;
+
+  @Field(6)
+  bool inRoom;
+
+  @Field(7)
+  bool isFriend;
+
+  @Field(8)
+  List<BadgeStruct> badgeList;
+
+  @Field(9)
+  bool followByOwner;
+
+  @Field(10)
+  bool isFistContribute;
+}
+
+// Indicator message
+@dataclass
+class Indicator extends Message {
+  @Field(1)
+  String key;
+
+  @Field(2)
+  int op;
+}
+
+// Ranking message
+@dataclass
+class Ranking extends Message {
+  @Field(1)
+  String type;
+
+  @Field(2)
+  String label;
+
+  @Field(3)
+  TikTokColor color;
+
+  @Field(4)
+  List<ValueLabel> details;
+}
+
+// TikTokColor message
+@dataclass
+class TikTokColor extends Message {
+  @Field(1)
+  String color;
+
+  @Field(4)
+  int id;
+
+  @Field(6)
+  int data1;
+}
+
+// ValueLabel message
+@dataclass
+class ValueLabel extends Message {
+  @Field(1)
+  int data;
+
+  @Field(2)
+  String label;
+
+  @Field(3)
+  String label2;
+
+  @Field(11)
+  String label3;
+}
+
+// MessageDetails message
+@dataclass
+class MessageDetails extends Message {
+  @Field(1)
+  int data1;
+
+  @Field(2)
+  TikTokColor color;
+
+  @Field(11)
+  String category;
+
+  @Field(21)
+  UserContainer user;
+}
+
+// UserContainer message
+@dataclass
+class UserContainer extends Message {
+  @Field(1)
+  User user;
+
+  @Field(2)
+  int data1;
+}
+
+// DataContainer message
+@dataclass
+class DataContainer extends Message {
+  @Field(1)
+  int data1;
+
+  @Field(2)
+  int data2;
+
+  @Field(3)
+  int data3;
+
+  @Field(4)
+  int data4;
+}
+//SEGMENT 13-5
+// Continuing from the previous conversion
+
+// DataContainer message
+@dataclass
+class DataContainer extends Message {
+  @Field(1)
+  int data1;
+
+  @Field(2)
+  int data2;
+
+  @Field(3)
+  int data3;
+
+  @Field(4)
+  int data4;
+
+  @Field(5)
+  int data5;
+
+  @Field(6)
+  int data6;
+
+  @Field(7)
+  int data7;
+
+  @Field(8)
+  int data8;
+
+  @Field(9)
+  int data9;
+}
+
+// TimeStampContainer message
+@dataclass
+class TimeStampContainer extends Message {
+  @Field(1)
+  int timestamp1;
+
+  @Field(2)
+  int timestamp2;
+
+  @Field(3)
+  int timestamp3;
+}
+
+// MemberMessageData message
+@dataclass
+class MemberMessageData extends Message {
+  @Field(1)
+  String type;
+
+  @Field(2)
+  String label;
+
+  @Field(3)
+  TikTokColor color;
+
+  @Field(4)
+  List<MessageDetails> details;
+}
+
+// LinkMicArmiesItems message
+@dataclass
+class LinkMicArmiesItems extends Message {
+  @Field(1)
+  int hostUserId;
+
+  @Field(2)
+  List<LinkMicArmiesItemsLinkMicArmiesGroup> battleGroups;
+}
+
+// LinkMicArmiesItemsLinkMicArmiesGroup message
+@dataclass
+class LinkMicArmiesItemsLinkMicArmiesGroup extends Message {
+  @Field(1)
+  List<User> users;
+
+  @Field(2)
+  int points;
+}
+
+// PollStartContent message
+@dataclass
+class PollStartContent extends Message {
+  @Field(1)
+  int startTime;
+
+  @Field(2)
+  int endTime;
+
+  @Field(3)
+  List<PollOptionInfo> optionList;
+
+  @Field(4)
+  String title;
+
+  @Field(5)
+  User operator;
+}
+
+// PollEndContent message
+@dataclass
+class PollEndContent extends Message {
+  @Field(1)
+  int endType;
+
+  @Field(2)
+  List<PollOptionInfo> optionList;
+
+  @Field(3)
+  User operator;
+}
+
+// PollOptionInfo message
+@dataclass
+class PollOptionInfo extends Message {
+  @Field(1)
+  int votes;
+
+  @Field(2)
+  String displayContent;
+
+  @Field(3)
+  int optionIdx;
+
+  @Field(4)
+  List<VoteUser> voteUserList;
+}
+
+// VoteUser message
+@dataclass
+class VoteUser extends Message {
+  @Field(1)
+  int userId;
+
+  @Field(2)
+  String nickName;
+}
+//SEGMENT 13-6
+// Continuing from the previous conversion
+
+// VoteUser message
+@dataclass
+class VoteUser extends Message {
+  @Field(1)
+  int userId;
+
+  @Field(2)
+  String nickName;
+
+  @Field(3)
+  Image avatarThumb;
+}
+
+// PollUpdateVotesContent message
+@dataclass
+class PollUpdateVotesContent extends Message {
+  @Field(2)
+  List<PollOptionInfo> optionList;
+}
+
+// UserFanTicket message
+@dataclass
+class UserFanTicket extends Message {
+  @Field(1)
+  int userId;
+
+  @Field(2)
+  int fanTicket;
+
+  @Field(3)
+  int matchTotalScore;
+
+  @Field(4)
+  int matchRank;
+}
+
+// FanTicketRoomNoticeContent message
+@dataclass
+class FanTicketRoomNoticeContent extends Message {
+  @Field(1)
+  List<UserFanTicket> userFanTicketList;
+
+  @Field(2)
+  int totalLinkMicFanTicket;
+
+  @Field(3)
+  int matchId;
+
+  @Field(4)
+  int eventTime;
+
+  @Field(5)
+  String fanTicketIconUrl;
+}
+
+// LinkerAcceptNoticeContent message
+@dataclass
+class LinkerAcceptNoticeContent extends Message {
+  @Field(1)
+  int fromUserId;
+
+  @Field(2)
+  int fromRoomId;
+
+  @Field(3)
+  int toUserId;
+}
+
+// LinkerCancelContent message
+@dataclass
+class LinkerCancelContent extends Message {
+  @Field(1)
+  int fromUserId;
+
+  @Field(2)
+  int toUserId;
+
+  @Field(3)
+  int cancelType;
+
+  @Field(4)
+  int actionId;
+}
+
+// ListUser message
+@dataclass
+class ListUser extends Message {
+  @Field(1)
+  User user;
+
+  @Field(2)
+  int linkmicId;
+
+  @Field(3)
+  String linkmicIdStr;
+
+  @Field(4)
+  int linkStatus;
+
+  @Field(5)
+  ListUserLinkType linkType;
+
+  @Field(6)
+  int userPosition;
+
+  @Field(7)
+  int silenceStatus;
+
+  @Field(8)
+  int modifyTime;
+
+  @Field(9)
+  int linkerId;
+
+  @Field(10)
+  int roleType;
+}
+
+// LinkerCloseContent message
+@dataclass
+class LinkerCloseContent extends Message {
+  // No fields needed for LinkerCloseContent message
+}
+
+// LinkerCreateContent message
+@dataclass
+class LinkerCreateContent extends Message {
+  // Define fields for LinkerCreateContent message if needed
+}
+//SEGMENT 13-7
+// Continuing from the previous conversion
+
+// LinkerCloseContent message
+@dataclass
+class LinkerCloseContent extends Message {
+  // No fields needed for LinkerCloseContent message
+}
+
+// LinkerCreateContent message
+@dataclass
+class LinkerCreateContent extends Message {
+  @Field(1)
+  int ownerId;
+
+  @Field(2)
+  int ownerRoomId;
+
+  @Field(3)
+  int linkType;
+}
+
+// LinkerEnterContent message
+@dataclass
+class LinkerEnterContent extends Message {
+  @Field(1)
+  List<ListUser> linkedUsersList;
+
+  @Field(2)
+  int anchorMultiLiveEnum;
+
+  @Field(3)
+  LinkmicUserSettingInfo anchorSettingInfo;
+}
+
+// LinkerInviteContent message
+@dataclass
+class LinkerInviteContent extends Message {
+  @Field(1)
+  int fromUserId;
+
+  @Field(2)
+  int fromRoomId;
+
+  @Field(3)
+  String toRtcExtInfo;
+
+  @Field(4)
+  bool rtcJoinChannel;
+
+  @Field(5)
+  int vendor;
+
+  @Field(6)
+  String secFromUserId;
+
+  @Field(7)
+  String toLinkmicIdStr;
+
+  @Field(8)
+  User fromUser;
+
+  @Field(9)
+  int requiredMicIdx;
+}
+
+// LinkerKickOutContent message
+@dataclass
+class LinkerKickOutContent extends Message {
+  @Field(1)
+  int fromUserId;
+
+  @Field(2)
+  KickoutReason kickoutReason;
+}
+
+// LinkerLeaveContent message
+@dataclass
+class LinkerLeaveContent extends Message {
+  @Field(1)
+  int userId;
+
+  @Field(2)
+  String linkmicIdStr;
+
+  @Field(3)
+  int sendLeaveUid;
+
+  @Field(4)
+  int leaveReason;
+}
+
+// LinkerLinkedListChangeContent message
+@dataclass
+class LinkerLinkedListChangeContent extends Message {
+  // No fields needed for LinkerLinkedListChangeContent message
+}
+
+// CohostListChangeContent message
+@dataclass
+class CohostListChangeContent extends Message {
+  // No fields needed for CohostListChangeContent message
+}
+
+// LinkerListChangeContent message
+@dataclass
+class LinkerListChangeContent extends Message {
+  @Field(1)
+  List<ListUser> linkedUsersList;
+
+  @Field(2)
+  List<ListUser> appliedUsersList;
+
+  @Field(3)
+  List<ListUser> connectingUsersList;
+}
+
+// LinkerMediaChangeContent message
+@dataclass
+class LinkerMediaChangeContent extends Message {
+  @Field(1)
+  int op;
+
+  @Field(2)
+  int toUserId;
+
+  @Field(3)
+  int anchorId;
+}
+//SEGMENT 13-8
+// Continuing from the previous conversion
+
+// LinkerMediaChangeContent message
+@dataclass
+class LinkerMediaChangeContent extends Message {
+  @Field(1)
+  int op;
+
+  @Field(2)
+  int toUserId;
+
+  @Field(3)
+  int anchorId;
+
+  @Field(4)
+  int roomId;
+
+  @Field(5)
+  int changeScene;
+}
+
+// LinkerMicIdxUpdateContent message
+@dataclass
+class LinkerMicIdxUpdateContent extends Message {
+  // No fields needed for LinkerMicIdxUpdateContent message
+}
+
+// LinkerMuteContent message
+@dataclass
+class LinkerMuteContent extends Message {
+  @Field(1)
+  int userId;
+
+  @Field(2)
+  int status;
+}
+
+// LinkerRandomMatchContent message
+@dataclass
+class LinkerRandomMatchContent extends Message {
+  @Field(1)
+  User user;
+
+  @Field(2)
+  int roomId;
+
+  @Field(3)
+  int inviteType;
+
+  @Field(4)
+  String matchId;
+
+  @Field(5)
+  int innerChannelId;
+}
+
+// LinkerReplyContent message
+@dataclass
+class LinkerReplyContent extends Message {
+  @Field(1)
+  int fromUserId;
+
+  @Field(2)
+  int fromRoomId;
+
+  @Field(3)
+  LinkerReplyContentLinkmicInfo fromUserLinkmicInfo;
+
+  @Field(4)
+  int toUserId;
+
+  @Field(5)
+  LinkerReplyContentLinkmicInfo toUserLinkmicInfo;
+
+  @Field(6)
+  int linkType;
+
+  @Field(7)
+  int replyStatus;
+
+  @Field(8)
+  LinkerSetting linkerSetting;
+
+  @Field(9)
+  User fromUser;
+
+  @Field(10)
+  User toUser;
+}
+
+// LinkerReplyContentLinkmicInfo message
+@dataclass
+class LinkerReplyContentLinkmicInfo extends Message {
+  @Field(1)
+  String accessKey;
+
+  @Field(2)
+  int linkMicId;
+
+  @Field(3)
+  bool joinable;
+
+  @Field(4)
+  int confluenceType;
+
+  @Field(5)
+  String rtcExtInfo;
+
+  @Field(6)
+  String rtcAppId;
+
+  @Field(7)
+  String rtcAppSign;
+
+  @Field(8)
+  String linkmicIdStr;
+
+  @Field(9)
+  int vendor;
+}
+
+// LinkerSetting message
+@dataclass
+class LinkerSetting extends Message {
+  @Field(1)
+  int maxMemberLimit;
+
+  @Field(2)
+  int linkType;
+
+  @Field(3)
+  int scene;
+}
+//SEGMENT 13-9
+// Continuing from the previous conversion
+
+// LinkerSetting message
+@dataclass
+class LinkerSetting extends Message {
+  @Field(1)
+  int maxMemberLimit;
+
+  @Field(2)
+  int linkType;
+
+  @Field(3)
+  int scene;
+
+  @Field(4)
+  int ownerUserId;
+
+  @Field(5)
+  int ownerRoomId;
+
+  @Field(6)
+  int vendor;
+}
+
+// LinkerSysKickOutContent message
+@dataclass
+class LinkerSysKickOutContent extends Message {
+  @Field(1)
+  int userId;
+
+  @Field(2)
+  String linkmicIdStr;
+}
+
+// LinkmicUserToastContent message
+@dataclass
+class LinkmicUserToastContent extends Message {
+  @Field(1)
+  int userId;
+
+  @Field(2)
+  int roomId;
+
+  @Field(3)
+  Text displayText;
+}
+
+// LinkerUpdateUserContent message
+@dataclass
+class LinkerUpdateUserContent extends Message {
+  @Field(1)
+  int fromUserId;
+
+  @Field(2)
+  int toUserId;
+}
+
+// LinkerUpdateUserSettingContent message
+@dataclass
+class LinkerUpdateUserSettingContent extends Message {
+  // No fields needed for LinkerUpdateUserSettingContent message
+}
+
+// LinkerWaitingListChangeContent message
+@dataclass
+class LinkerWaitingListChangeContent extends Message {
+  // No fields needed for LinkerWaitingListChangeContent message
+}
+
+// LinkmicUserSettingInfo message
+@dataclass
+class LinkmicUserSettingInfo extends Message {
+  @Field(1)
+  int userId;
+
+  @Field(2)
+  int layout;
+
+  @Field(3)
+  int fixMicNum;
+
+  @Field(4)
+  int allowRequestFromUser;
+
+  @Field(5)
+  int allowRequestFromFollowerOnly;
+
+  @Field(7)
+  LinkmicApplierSortSetting applierSortSetting;
+}
+
+// Player message
+@dataclass
+class Player extends Message {
+  @Field(1)
+  int roomId;
+
+  @Field(2)
+  int userId;
+}
+
+// AllListUser message
+@dataclass
+class AllListUser extends Message {
+  @Field(2)
+  List<LinkLayerListUser> linkedList;
+
+  @Field(3)
+  List<LinkLayerListUser> appliedList;
+
+  @Field(4)
+  List<LinkLayerListUser> invitedList;
+
+  @Field(5)
+  List<LinkLayerListUser> readyList;
+}
+
+// LinkLayerListUser message
+@dataclass
+class LinkLayerListUser extends Message {
+  @Field(1)
+  User user;
+
+  @Field(2)
+  int linkmicId;
+
+  @Field(3)
+  Position pos;
+
+  @Field(4)
+  int linkedTimeNano;
+}
+//SEGMENT 13-10
+// Continuing from the previous conversion
+
+// LinkLayerListUser message
+@dataclass
+class LinkLayerListUser extends Message {
+  @Field(1)
+  User user;
+
+  @Field(2)
+  int linkmicId;
+
+  @Field(3)
+  Position pos;
+
+  @Field(4)
+  int linkedTimeNano;
+
+  @Field(5)
+  String appVersion;
+
+  @Field(7)
+  int magicNumber1;
+}
+
+// Position message
+@dataclass
+class Position extends Message {
+  @Field(1)
+  int type;
+
+  @Field(2)
+  LinkPosition link;
+}
+
+// LinkPosition message
+@dataclass
+class LinkPosition extends Message {
+  @Field(1)
+  int position;
+
+  @Field(2)
+  int opt;
+}
+
+// GroupPlayer message
+@dataclass
+class GroupPlayer extends Message {
+  @Field(1)
+  int channelId;
+
+  @Field(2)
+  User user;
+}
+
+// DslConfig message
+@dataclass
+class DslConfig extends Message {
+  @Field(1)
+  int sceneVersion;
+
+  @Field(2)
+  String layoutId;
+}
+
+// GroupChannelAllUser message
+@dataclass
+class GroupChannelAllUser extends Message {
+  @Field(1)
+  int groupChannelId;
+
+  @Field(2)
+  List<GroupChannelUser> userList;
+}
+
+// GroupChannelUser message
+@dataclass
+class GroupChannelUser extends Message {
+  @Field(1)
+  int channelId;
+
+  @Field(2)
+  GroupStatus status;
+
+  @Field(3)
+  TextType type;
+
+  @Field(4)
+  AllListUser allUser;
+
+  @Field(5)
+  int joinTime;
+
+  @Field(6)
+  int linkedTime;
+
+  @Field(7)
+  GroupPlayer ownerUser;
+}
+
+// RtcExtraInfo message
+@dataclass
+class RtcExtraInfo extends Message {
+  @Field(1)
+  RtcExtraInfoRtcEngineConfig liveRtcEngineConfig;
+
+  @Field(2)
+  List<RtcExtraInfoRtcLiveVideoParam> liveRtcVideoParamList;
+
+  @Field(3)
+  RtcExtraInfoRtcBitrateMap rtcBitrateMap;
+
+  @Field(4)
+  int rtcFps;
+
+  @Field(8)
+  String rtcBusinessId;
+
+  @Field(10)
+  int interactClientType;
+}
+
+// RtcExtraInfoRtcEngineConfig message
+@dataclass
+class RtcExtraInfoRtcEngineConfig extends Message {
+  @Field(1)
+  String rtcAppId;
+
+  @Field(2)
+  String rtcUserId;
+
+  @Field(3)
+  String rtcToken;
+}
+//SEGMENT 13-11
+// Continuing from the previous conversion
+
+// RtcExtraInfoRtcEngineConfig message continued
+@dataclass
+class RtcExtraInfoRtcEngineConfig extends Message {
+  @Field(1)
+  String rtcAppId;
+
+  @Field(2)
+  String rtcUserId;
+
+  @Field(3)
+  String rtcToken;
+
+  @Field(4)
+  int rtcChannelId;
+}
+
+// RtcExtraInfoRtcLiveVideoParam message
+@dataclass
+class RtcExtraInfoRtcLiveVideoParam extends Message {
+  @Field(1)
+  int strategyId;
+
+  @Field(2)
+  RtcExtraInfoRtcVideoParam params;
+}
+
+// RtcExtraInfoRtcVideoParam message
+@dataclass
+class RtcExtraInfoRtcVideoParam extends Message {
+  @Field(1)
+  int width;
+
+  @Field(2)
+  int height;
+
+  @Field(3)
+  int fps;
+
+  @Field(4)
+  int bitrateKbps;
+}
+
+// RtcExtraInfoRtcBitrateMap message
+@dataclass
+class RtcExtraInfoRtcBitrateMap extends Message {
+  @Field(1)
+  int xx1;
+
+  @Field(2)
+  int xx2;
+
+  @Field(3)
+  int xx3;
+
+  @Field(4)
+  int xx4;
+}
+
+// CreateChannelContent message
+@dataclass
+class CreateChannelContent extends Message {
+  @Field(1)
+  Player owner;
+
+  @Field(2)
+  String ownerLinkMicId;
+}
+
+// ListChangeContent message
+@dataclass
+class ListChangeContent extends Message {
+  @Field(1)
+  TextType type;
+
+  @Field(2)
+  AllListUser list;
+}
+
+// MultiLiveContent message
+@dataclass
+class MultiLiveContent extends Message {
+  @Field(2)
+  MultiLiveContentInviteBizContent inviteBizContent;
+
+  @Field(3)
+  MultiLiveContentReplyBizContent replyBizContent;
+
+  @Field(4)
+  MultiLiveContentPermitBizContent permitBizContent;
+
+  @Field(6)
+  MultiLiveContentKickOutBizContent kickOutBizContent;
+}
+
+// MultiLiveContentInviteBizContent message
+@dataclass
+class MultiLiveContentInviteBizContent extends Message {
+  @Field(1)
+  LinkmicUserSettingInfo anchorSettingInfo;
+
+  @Field(2)
+  int inviteSource;
+
+  @Field(3)
+  User operatorUserInfo;
+
+  @Field(4)
+  int operatorLinkAdminType;
+
+  @Field(5)
+  User inviteeUserInfo;
+}
+
+// MultiLiveContentReplyBizContent message
+@dataclass
+class MultiLiveContentReplyBizContent extends Message {
+  @Field(1)
+  int linkType;
+}
+//SEGMENT 13-12
+// Continuing from the previous conversion
+
+// MultiLiveContentReplyBizContent message
+@dataclass
+class MultiLiveContentReplyBizContent extends Message {
+  @Field(1)
+  int linkType;
+
+  @Field(2)
+  int isTurnOffInvitation;
+
+  @Field(3)
+  User replyUserInfo;
+}
+
+// MultiLiveContentPermitBizContent message
+@dataclass
+class MultiLiveContentPermitBizContent extends Message {
+  @Field(1)
+  LinkmicUserSettingInfo anchorSettingInfo;
+
+  @Field(2)
+  int expireTimestamp;
+
+  @Field(3)
+  User operatorUserInfo;
+
+  @Field(4)
+  int operatorLinkAdminType;
+}
+
+// MultiLiveContentKickOutBizContent message
+@dataclass
+class MultiLiveContentKickOutBizContent extends Message {
+  @Field(1)
+  User operatorUserInfo;
+
+  @Field(2)
+  int operatorLinkAdminType;
+
+  @Field(3)
+  User kickPlayerUserInfo;
+}
+
+// InviteContent message
+@dataclass
+class InviteContent extends Message {
+  @Field(1)
+  Player invitor;
+
+  @Field(2)
+  RtcExtraInfo inviteeRtcExtInfo;
+
+  @Field(3)
+  String invitorLinkMicId;
+
+  @Field(4)
+  String inviteeLinkMicId;
+
+  @Field(5)
+  bool isOwner;
+
+  @Field(6)
+  Position pos;
+
+  @Field(7)
+  DslConfig dsl;
+
+  @Field(8)
+  User invitee;
+
+  @Field(9)
+  User operator;
+}
+
+// ApplyContent message
+@dataclass
+class ApplyContent extends Message {
+  @Field(1)
+  Player applier;
+
+  @Field(2)
+  String applierLinkMicId;
+}
+
+// PermitApplyContent message
+@dataclass
+class PermitApplyContent extends Message {
+  @Field(1)
+  Player permiter;
+
+  @Field(2)
+  String permiterLinkMicId;
+
+  @Field(3)
+  Position applierPos;
+
+  @Field(4)
+  ReplyStatus replyStatus;
+
+  @Field(5)
+  DslConfig dsl;
+
+  @Field(6)
+  User applier;
+
+  @Field(7)
+  User operator;
+
+  @Field(8)
+  String applierLinkMicId;
+}
+
+// ReplyInviteContent message
+@dataclass
+class ReplyInviteContent extends Message {
+  @Field(1)
+  Player invitee;
+
+  @Field(2)
+  ReplyStatus replyStatus;
+
+  @Field(3)
+  String inviteeLinkMicId;
+}
+//SEGMENT 13-13
+// Continuing from the previous conversion
+
+// ReplyInviteContent message
+@dataclass
+class ReplyInviteContent extends Message {
+  @Field(1)
+  Player invitee;
+
+  @Field(2)
+  ReplyStatus replyStatus;
+
+  @Field(3)
+  String inviteeLinkMicId;
+
+  @Field(4)
+  Position inviteePos;
+
+  @Field(5)
+  Player inviteOperatorUser;
+}
+
+// KickOutContent message
+@dataclass
+class KickOutContent extends Message {
+  @Field(1)
+  Player offliner;
+
+  @Field(2)
+  KickoutReason kickoutReason;
+}
+
+// CancelApplyContent message
+@dataclass
+class CancelApplyContent extends Message {
+  @Field(1)
+  Player applier;
+
+  @Field(2)
+  String applierLinkMicId;
+}
+
+// CancelInviteContent message
+@dataclass
+class CancelInviteContent extends Message {
+  @Field(1)
+  Player invitor;
+
+  @Field(2)
+  String invitorLinkMicId;
+
+  @Field(3)
+  String inviteeLinkMicId;
+
+  @Field(4)
+  int inviteSeqId;
+
+  @Field(5)
+  Player invitee;
+}
+
+// LeaveContent message
+@dataclass
+class LeaveContent extends Message {
+  @Field(1)
+  Player leaver;
+
+  @Field(2)
+  int leaveReason;
+}
+
+// FinishChannelContent message
+@dataclass
+class FinishChannelContent extends Message {
+  @Field(1)
+  Player owner;
+
+  @Field(2)
+  int finishReason;
+}
+
+// JoinDirectContent message
+@dataclass
+class JoinDirectContent extends Message {
+  @Field(1)
+  LinkLayerListUser joiner;
+
+  @Field(2)
+  AllListUser allUsers;
+}
+
+// LeaveJoinGroupContent message
+@dataclass
+class LeaveJoinGroupContent extends Message {
+  @Field(1)
+  GroupPlayer operator;
+
+  @Field(2)
+  int groupChannelId;
+
+  @Field(3)
+  String leaveSource;
+}
+
+// PermitJoinGroupContent message
+@dataclass
+class PermitJoinGroupContent extends Message {
+  @Field(1)
+  GroupPlayer approver;
+
+  @Field(2)
+  AgreeStatus agreeStatus;
+
+  @Field(3)
+  TextType type;
+
+  @Field(4)
+  List<RtcExtraInfo> groupExtInfoList;
+
+  @Field(5)
+  GroupChannelAllUser groupUser;
+}
+
+// CancelJoinGroupContent message
+@dataclass
+class CancelJoinGroupContent extends Message {
+  @Field(1)
+  List<GroupPlayer> leaverList;
+
+  @Field(2)
+  GroupPlayer operator;
+}
+//SEGMENT 13-14
+// Continuing from the previous conversion
+
+// CancelJoinGroupContent message
+@dataclass
+class CancelJoinGroupContent extends Message {
+  @Field(1)
+  List<GroupPlayer> leaverList;
+
+  @Field(2)
+  GroupPlayer operator;
+
+  @Field(3)
+  TextType type;
+}
+
+// P2PGroupChangeContent message
+@dataclass
+class P2PGroupChangeContent extends Message {
+  @Field(1)
+  List<RtcExtraInfo> groupExtInfoList;
+
+  @Field(2)
+  GroupChannelAllUser groupUser;
+}
+
+// BusinessContent message
+@dataclass
+class BusinessContent extends Message {
+  @Field(1)
+  int overLength;
+
+  @Field(100)
+  MultiLiveContent multiLiveContent;
+
+  @Field(200)
+  BusinessContentCohostContent cohostContent;
+}
+
+// BusinessContentCohostContent message
+@dataclass
+class BusinessContentCohostContent extends Message {
+  @Field(1)
+  BusinessContentJoinGroupBizContent joinGroupBizContent;
+}
+
+// BusinessContentJoinGroupBizContent message
+@dataclass
+class BusinessContentJoinGroupBizContent extends Message {
+  @Field(1)
+  int fromRoomAgeRestricted;
+
+  @Field(2)
+  BusinessContentTag fromTag;
+
+  @Field(3)
+  BusinessContentPerceptionDialogInfo dialog;
+
+  @Field(4)
+  PunishEventInfo punishInfo;
+
+  @Field(101)
+  BusinessContentJoinGroupMessageExtra joinGroupMsgExtra;
+}
+
+// BusinessContentTag message
+@dataclass
+class BusinessContentTag extends Message {
+  @Field(1)
+  int tagType;
+
+  @Field(2)
+  String tagValue;
+
+  @Field(3)
+  String tagText;
+}
+//SEGMENT 13-15
+
